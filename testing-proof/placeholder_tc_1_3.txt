@@ -1,5 +1,0 @@
-Test Case 1.3 - Remove Product Verification
-
-Replace this file with a PNG screenshot proving that a product was
-successfully removed from the inventory array and the updated list
-is rendered in the browser interface.

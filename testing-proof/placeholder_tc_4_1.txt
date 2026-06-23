@@ -1,5 +1,0 @@
-Test Case 4.1 - Stock Search Positive Verification
-
-Replace this file with a PNG screenshot proving that searching for an
-existing product displays the message "Product is in stock" in the
-browser interface.

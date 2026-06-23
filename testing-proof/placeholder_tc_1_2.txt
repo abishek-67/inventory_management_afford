@@ -1,5 +1,0 @@
-Test Case 1.2 - Add Product Verification
-
-Replace this file with a PNG screenshot proving that a new product
-was successfully added to the inventory array and the updated list
-is rendered in the browser interface.

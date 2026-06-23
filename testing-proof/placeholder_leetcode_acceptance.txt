@@ -1,5 +1,0 @@
-LeetCode Acceptance Verification
-
-Replace this file with a PNG screenshot proving that the Zigzag
-Conversion solution was accepted on LeetCode, showing all test
-cases passed with runtime and memory statistics.
