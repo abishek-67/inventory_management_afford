@@ -1,0 +1,5 @@
+Test Case 1.1 - Inventory Display Verification
+
+Replace this file with a PNG screenshot proving that the inventory list
+renders correctly on page load with all default Dell products visible
+in the browser interface.

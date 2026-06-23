@@ -1,0 +1,5 @@
+Test Case 4.2 - Stock Search Negative Verification
+
+Replace this file with a PNG screenshot proving that searching for a
+non-existing product displays the message "Product is out of stock"
+in the browser interface.

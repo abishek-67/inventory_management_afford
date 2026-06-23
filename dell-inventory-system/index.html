@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dell E-commerce Inventory Management System - Track, manage, and search Dell product inventory in real time.">
+    <title>Dell Inventory Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <div class="logo-group">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+                            <path d="M8 16L14 10L20 16L14 22Z" fill="white" opacity="0.9"/>
+                            <path d="M14 16L20 10L26 16L20 22Z" fill="white" opacity="0.6"/>
+                            <defs>
+                                <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                                    <stop stop-color="#0076CE"/>
+                                    <stop offset="1" stop-color="#00447C"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Dell Technologies</h1>
+                        <span class="logo-subtitle">Inventory Management System</span>
+                    </div>
+                </div>
+                <div class="header-stats" id="headerStats">
+                    <div class="stat-pill">
+                        <span class="stat-label">Total Products</span>
+                        <span class="stat-value" id="totalCount">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="dashboard-grid">
+
+                <section class="card inventory-card" id="inventorySection">
+                    <div class="card-header">
+                        <div class="card-title-group">
+                            <div class="card-icon inventory-icon">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <rect x="2" y="3" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                    <line x1="2" y1="8" x2="18" y2="8" stroke="currentColor" stroke-width="1.5"/>
+                                    <line x1="8" y1="8" x2="8" y2="17" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <h2>Current Inventory</h2>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <ul class="inventory-list" id="inventoryList"></ul>
+                        <div class="empty-state" id="emptyState" style="display: none;">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
+                                <line x1="16" y1="24" x2="32" y2="24" stroke="currentColor" stroke-width="1.5"/>
+                            </svg>
+                            <p>No products in inventory</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="controls-column">
+
+                    <section class="card search-card" id="searchSection">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <div class="card-icon search-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <circle cx="9" cy="9" r="6" stroke="currentColor" stroke-width="1.5"/>
+                                        <line x1="13.5" y1="13.5" x2="17" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <h2>Check Stock Availability</h2>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input type="text" id="searchInput" placeholder="Enter product name to search..." autocomplete="off">
+                                <button id="searchBtn" onclick="searchProduct()">Search</button>
+                            </div>
+                            <div class="search-result" id="searchResult"></div>
+                        </div>
+                    </section>
+
+                    <section class="card add-card" id="addSection">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <div class="card-icon add-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/>
+                                        <line x1="10" y1="6" x2="10" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        <line x1="6" y1="10" x2="14" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <h2>Add Product</h2>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input type="text" id="addInput" placeholder="Enter new product name..." autocomplete="off">
+                                <button id="addBtn" class="btn-success" onclick="addProduct()">Add</button>
+                            </div>
+                            <div class="action-result" id="addResult"></div>
+                        </div>
+                    </section>
+
+                    <section class="card remove-card" id="removeSection">
+                        <div class="card-header">
+                            <div class="card-title-group">
+                                <div class="card-icon remove-icon">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/>
+                                        <line x1="6" y1="10" x2="14" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <h2>Remove Product</h2>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input type="text" id="removeInput" placeholder="Enter product name to remove..." autocomplete="off">
+                                <button id="removeBtn" class="btn-danger" onclick="removeProduct()">Remove</button>
+                            </div>
+                            <div class="action-result" id="removeResult"></div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>Dell Technologies Inventory Management System</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
