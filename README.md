@@ -15,12 +15,11 @@ inventory management system and a technical DSA solution for the Zigzag Conversi
 │   ├── Solution.java                       Zigzag Conversion solution
 │   └── leetcode_acceptance_proof.png       LeetCode submission proof
 ├── testing-proof/
-│   ├── tc_1_1_inventory_display.png        Test Case 1.1 - Inventory display
-│   ├── tc_1_2_add_product.png              Test Case 1.2 - Add product
-│   ├── tc_1_3_remove_product.png           Test Case 1.3 - Remove product
-│   ├── tc_4_1_search_in_stock.png          Test Case 4.1 - Search (in stock)
-│   ├── tc_4_2_search_out_stock.png         Test Case 4.2 - Search (out of stock)
-│   └── leetcode_acceptance.png             LeetCode acceptance proof
+│   ├── tc_1.1.png                          Test Case 1.1 - Inventory display
+│   ├── tc_1.2.png                          Test Case 1.2 - Add product
+│   ├── tc_1.3.png                          Test Case 1.3 - Remove product
+│   ├── tc_4.1.png                          Test Case 4.1 - Search (in stock)
+│   └── tc_4.2.png                          Test Case 4.2 - Search (out of stock)
 └── README.md                               This documentation file
 ```
 
@@ -66,14 +65,14 @@ submission on LeetCode with all test cases passed.
 
 ## Test Requirements Mapping
 
-| Test Case | Description                              | Verification Proof                                    |
-|-----------|------------------------------------------|-------------------------------------------------------|
-| TC 1.1    | Inventory list renders on page load      | `testing-proof/tc_1_1_inventory_display.png`          |
-| TC 1.2    | Add product to inventory                 | `testing-proof/tc_1_2_add_product.png`                |
-| TC 1.3    | Remove product from inventory            | `testing-proof/tc_1_3_remove_product.png`             |
-| TC 4.1    | Search returns "Product is in stock"     | `testing-proof/tc_4_1_search_in_stock.png`            |
-| TC 4.2    | Search returns "Product is out of stock" | `testing-proof/tc_4_2_search_out_stock.png`           |
-| LeetCode  | Zigzag Conversion accepted               | `testing-proof/leetcode_acceptance.png`               |
+| Test Case | Description                              | Verification Proof                                         |
+|-----------|------------------------------------------|------------------------------------------------------------|
+| TC 1.1    | Inventory list renders on page load      | `testing-proof/tc_1.1.png`                                 |
+| TC 1.2    | Add product to inventory                 | `testing-proof/tc_1.2.png`                                 |
+| TC 1.3    | Remove product from inventory            | `testing-proof/tc_1.3.png`                                 |
+| TC 4.1    | Search returns "Product is in stock"     | `testing-proof/tc_4.1.png`                                 |
+| TC 4.2    | Search returns "Product is out of stock" | `testing-proof/tc_4.2.png`                                 |
+| LeetCode  | Zigzag Conversion accepted               | `dsa-zigzag-conversion/leetcode_acceptance_proof.png`      |
 
 All test case verification proofs are included as PNG screenshots in the `testing-proof/` directory.
 
